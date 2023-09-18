@@ -3,7 +3,10 @@ const changeStateButton =
 
 // Додати обробник події "click" для кнопки
 changeStateButton.addEventListener('click', () => {
-  const newState = { message: 'Новий стан' }
+  // const newState = { message: 'Новий стан' }
+
+  const newState = { message: new Date().getTime() }
+
   history.pushState(newState, 'New Page', '/popstate#test')
 
   console.log('Стан змінено:', newState)
